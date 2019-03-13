@@ -1,6 +1,21 @@
-<h1> <%= @restaurant.name %></h1>
-<p>
-  <%= @restaurant.category %>
-  <%= @restaurant.address %>
-  <%= @restaurant.phone_number %>
-</p>
+<div class="container">
+  <h1 class="text-center"> <%= @restaurant.name %></h1>
+  <ul>
+    <li class="list-group-item"><%= @restaurant.category %></li>
+    <li class="list-group-item"><%= @restaurant.address %></li>
+    <li class="list-group-item"><%= @restaurant.phone_number %></li>
+  </ul>
+
+  <h2 class='text-center'> Reviews </h2>
+
+  <ul>
+    <% @restaurant.reviews.all.each do |each| %>
+    <li class="list-group-item"> <%= each.content %> </li>
+    <% end %>
+  </ul>
+
+</div>
+
+
+<%= link_to "Leave a review", new_restaurant_review_path(@restaurant) %>
+<%= link_to "Go back", restaurants_path %>

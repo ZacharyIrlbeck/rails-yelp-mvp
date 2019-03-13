@@ -1,7 +1,12 @@
+<div class="container">
+  <h1 class="text-center"> Welcome to the Restaurants List! </h1>
+  <ul class="list-group">
+    <% @restaurants.each do |restaurant| %>
+      <li class="list-group-item text-center list-group-item-action"> <%= link_to restaurant.name , restaurant_path(restaurant) %> </li>
+    <% end %>
+  </ul>
 
-<ul>
-  <%= @restaurants.each do |restaurant| %>
-    <li> <%= @restaurant.name %> </li>
-  <% end %>
-</ul>
+  <%= link_to "Submit a restaurant", new_restaurant_path %>
+
+</div>
 
