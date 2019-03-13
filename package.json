@@ -1,5 +1,9 @@
 {
   "name": "rails-yelp-mvp",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "boostrap": "^2.0.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.14.7"
+  }
 }
